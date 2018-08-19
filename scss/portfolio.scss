@@ -1,0 +1,9 @@
+$primary-color: rgb(43, 151, 253);
+$accent: rgb(253, 182, 89);
+
+body{
+    background: $primary-color;
+    color: $accent;
+    padding: 160px;
+    margin: 40px;
+}

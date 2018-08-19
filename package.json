@@ -1,0 +1,14 @@
+{
+  "name": "full-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass --w css/ -o css/ --recursive"
+  },
+  "author": "Onibenjo",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
