@@ -1,4 +1,42 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
+.menu-button {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+.menu-button .btn-line {
+  width: 28px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  background: #fff;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+.menu-button.close {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.menu-button.close .btn-line:nth-child(1) {
+  -webkit-transform: rotate(45deg) translate(5px, 5px);
+          transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-button.close .btn-line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-button.close .btn-line:nth-child(3) {
+  -webkit-transform: rotate(-45deg) translate(7px, -7px);
+          transform: rotate(-45deg) translate(7px, -7px);
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
