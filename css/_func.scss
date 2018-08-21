@@ -29,3 +29,26 @@ $b-opacity: .6;
 @mixin easeOut{
     transition: all .5s ease-out;
 }
+
+
+//Media Query
+@mixin media-small{
+    @media screen and (max-width: 580px){
+        @content;
+    }
+}
+@mixin media-medium{
+    @media screen and (max-width: 768px){
+        @content;
+    }
+}
+@mixin media-large{
+    @media screen and (min-width: 769px) and (max-width: 1170px){
+        @content;
+    }
+}
+@mixin media-xlarge{
+    @media screen and (min-width: 1171px){
+        @content;
+    }
+}

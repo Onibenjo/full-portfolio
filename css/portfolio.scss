@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import 'func';
 @import 'menu';
+@import 'mobile';
 
 *{
     box-sizing: border-box;
@@ -35,7 +36,7 @@ h3{
     &.sm-heading{
         margin-bottom: 2rem;
         padding: .2rem 1em;
-        background: rgba(lighten($primary-color, 2), .5) ; 
+        background: rgba(lighten($primary-color, 2), .3) ; 
     }
 }
 

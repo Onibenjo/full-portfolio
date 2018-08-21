@@ -1,0 +1,62 @@
+//WideScreen
+@include media-xlarge{
+    
+}
+
+@include media-large{
+    
+}
+
+@include media-medium{
+    main{
+        text-align: center;
+        align-items: center;
+
+        .lg-heading{
+            line-height: 1;
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+@include media-small{
+    .lg-heading{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .sm-heading{
+        margin-bottom: 2rem;
+        padding: 2rem;
+    }
+
+    main#home h1{
+        margin-top: 10vh;
+    }
+
+    ul.menu-nav,
+    div.menu-brand{
+        float: none;
+        width: 100%;
+        min-height: 0;
+
+        &.show{
+            transform: translate3d(0, 0, 0) ;
+        }
+    }
+
+    .menu-brand{
+        height: 35vh;
+        transform: translate3d(100%,0, 0) ;
+
+        .portrait{
+            width: 10em;
+            height: 10em;
+        }
+    }
+    .menu-nav{
+        height: 65vh;
+        transform: translate3d(-100%,0 ,0) ;
+        font-size: .8rem;
+    }
+}
