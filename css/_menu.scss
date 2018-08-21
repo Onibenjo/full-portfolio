@@ -1,17 +1,22 @@
+
+*{
+    color: set-textcolor($primary-color);
+}
+
 //Menu
 .menu-button{
     position: absolute;
     z-index: 3;
-    right: 35px;
-    top: 35px;
+    right: 2rem;
+    top: 2rem;
     cursor: pointer;
     @include easeOut;
 
     .btn-line{
-        width: 28px;
-        height: 3px;
+        width: 2em;
+        height: .1em;
         margin: 0 0 5px 0;
-        background: #fff;
+        background: set-textcolor($primary-color);
         @include easeOut;
     }
 
@@ -41,10 +46,12 @@
 
 //Navs 
 .menu{
+    //font-family: 'Inconsolata', monospace;
+    font-family: 'Montserrat Alternates', sans-serif;
     position: fixed;
     top:0;
     width: 100vw;
-    opacity:.9;
+    opacity:.95;
     visibility: hidden;
     @include easeOut;
 
@@ -67,7 +74,7 @@
     &-nav{
         padding: 0;
         margin:0;
-        background: darken($primary-color, 5);
+        background: darken($primary-color, 6);
         list-style: none;
         transform: translate3d(0, -100%, 0) ;
         @include easeOut;

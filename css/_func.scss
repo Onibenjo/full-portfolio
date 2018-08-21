@@ -1,9 +1,9 @@
-$primary-color: #444 ;
+$primary-color: rgb(31, 34, 36) ;
 $accent: rgb(253, 182, 89);
-$secondary: #eece1a ;
+$secondary: #1ae7ee ;
 $home-image: url(../img/hero.jpg);
 $show-homeimg: true;
-$b-opacity: .6;
+$b-opacity: .4;
 
 @mixin background{
     @if $show-homeimg{
@@ -29,6 +29,27 @@ $b-opacity: .6;
 @mixin easeOut{
     transition: all .5s ease-out;
 }
+
+
+
+@function set-textcolor($color){
+    @if (lightness($color) > 40) {
+        @return #000;
+    }
+    @else{
+        @return #fff;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 //Media Query

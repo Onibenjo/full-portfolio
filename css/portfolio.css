@@ -1,17 +1,23 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
+@import url("https://fonts.googleapis.com/css?family=Inconsolata|Montserrat+Alternates");
+* {
+  color: #fff;
+}
+
 .menu-button {
   position: absolute;
   z-index: 3;
-  right: 35px;
-  top: 35px;
+  right: 2rem;
+  top: 2rem;
   cursor: pointer;
   -webkit-transition: all .5s ease-out;
   transition: all .5s ease-out;
 }
 
 .menu-button .btn-line {
-  width: 28px;
-  height: 3px;
+  width: 2em;
+  height: .1em;
   margin: 0 0 5px 0;
   background: #fff;
   -webkit-transition: all .5s ease-out;
@@ -38,10 +44,11 @@
 }
 
 .menu {
+  font-family: 'Montserrat Alternates', sans-serif;
   position: fixed;
   top: 0;
   width: 100vw;
-  opacity: .9;
+  opacity: .95;
   visibility: hidden;
   -webkit-transition: all .5s ease-out;
   transition: all .5s ease-out;
@@ -74,7 +81,7 @@
 .menu-nav {
   padding: 0;
   margin: 0;
-  background: #373737;
+  background: #111214;
   list-style: none;
   -webkit-transform: translate3d(0, -100%, 0);
           transform: translate3d(0, -100%, 0);
@@ -88,7 +95,7 @@
 }
 
 .menu-brand {
-  background: #2b2b2b;
+  background: #070809;
   -webkit-transform: translate3d(0, 100%, 0);
           transform: translate3d(0, 100%, 0);
   -webkit-transition: all .5s ease-out;
@@ -107,7 +114,7 @@
   background-size: cover;
   background-position: 40%, 30%;
   border-radius: 50%;
-  border: 2px solid #eece1a;
+  border: 2px solid #1ae7ee;
 }
 
 .menu .nav-items {
@@ -124,7 +131,7 @@
 }
 
 .menu .nav-items.active > a {
-  color: #eece1a;
+  color: #1ae7ee;
   cursor: not-allowed;
 }
 
@@ -142,8 +149,8 @@
 }
 
 .menu .navlink:hover {
-  background-color: #444;
-  color: #eece1a;
+  background-color: #1f2224;
+  color: #1ae7ee;
 }
 
 .nav-items:nth-child(1) {
@@ -166,6 +173,178 @@
           transition-delay: 0.4s;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #1f2224;
+  color: #fff;
+  width: 100vw;
+  margin: 0;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+body#bg-img {
+  background: url(../img/hero.jpg) no-repeat fixed;
+  background-size: cover;
+}
+
+body#bg-img:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgba(31, 34, 36, 0.4);
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h3 {
+  margin: 0;
+  font-weight: 400;
+}
+
+h1.lg-heading,
+h3.lg-heading {
+  font-size: 4rem;
+}
+
+h1.sm-heading,
+h3.sm-heading {
+  margin-bottom: 2rem;
+  padding: .2rem 1em;
+  background: rgba(36, 39, 41, 0.3);
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.text-secondary {
+  color: #1ae7ee;
+}
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh-3.7rem);
+}
+
+main .icons {
+  margin-top: 1rem;
+}
+
+main .icons a {
+  padding: .4rem;
+}
+
+main .icons a:hover {
+  color: #1ae7ee;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+main#home {
+  overflow: hidden;
+}
+
+main#home h1 {
+  margin-top: 20vh;
+}
+
+.about-info {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2em;
+      grid-template-areas: 'bio-image bio bio' 'job1 job2 job3';
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  text-align: left;
+}
+
+.bio-image {
+  background: url(../img/I2.jpg) no-repeat;
+  background-position: 20%, 0;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: bio-image;
+  width: 12em;
+  height: 12em;
+  border-radius: 50%;
+  border: 3px solid #1ae7ee;
+  background-size: cover;
+  margin: auto;
+}
+
+.bio {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: bio;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.job1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: job1;
+}
+
+.job2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: job2;
+}
+
+.job3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: job3;
+}
+
+.job {
+  background: #2b2f32;
+  padding: .5em;
+  border-top: #1ae7ee 2px dashed;
+  border-bottom: #1ae7ee 2px dashed;
+}
+
+h6 {
+  margin-top: .5rem;
+  margin-bottom: .7rem;
+}
+
+h6:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 10em;
+  height: 1px;
+  background-color: #1ae7ee;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #0e1011;
+  color: #fff;
+  bottom: 0;
+  height: 3.7rem;
+}
+
 @media screen and (max-width: 768px) {
   main {
     text-align: center;
@@ -176,6 +355,12 @@
   main .lg-heading {
     line-height: 1;
     margin-bottom: 1.5rem;
+  }
+  .about-info {
+        grid-template-areas: 'bio-image'  'bio'  'job1'  'job2'  'job3';
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    font-size: 1rem;
   }
 }
 
@@ -217,95 +402,5 @@
             transform: translate3d(-100%, 0, 0);
     font-size: .8rem;
   }
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  background: #444;
-  color: azure;
-  width: 100vw;
-  margin: 0;
-  line-height: 1.5;
-}
-
-body#bg-img {
-  background: url(../img/hero.jpg) no-repeat fixed;
-  background-size: cover;
-}
-
-body#bg-img:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: rgba(68, 68, 68, 0.6);
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
-h1,
-h3 {
-  margin: 0;
-  font-weight: 400;
-}
-
-h1.lg-heading,
-h3.lg-heading {
-  font-size: 4rem;
-}
-
-h1.sm-heading,
-h3.sm-heading {
-  margin-bottom: 2rem;
-  padding: .2rem 1em;
-  background: rgba(73, 73, 73, 0.3);
-}
-
-header {
-  position: fixed;
-  z-index: 2;
-  width: 100%;
-}
-
-.text-secondary {
-  color: #eece1a;
-}
-
-main {
-  padding: 4rem;
-  height: 100%;
-}
-
-main .icons {
-  margin-top: 1rem;
-}
-
-main .icons a {
-  padding: .4rem;
-}
-
-main .icons a:hover {
-  color: #eece1a;
-  -webkit-transition: all .5s ease-out;
-  transition: all .5s ease-out;
-}
-
-main#home {
-  overflow: hidden;
-}
-
-main#home h1 {
-  margin-top: 20vh;
 }
 /*# sourceMappingURL=portfolio.css.map */
