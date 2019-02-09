@@ -1,6 +1,6 @@
 $primary-color: rgb(31, 34, 36) ;
 $accent: rgb(253, 182, 89);
-$secondary: #1ae7ee ;
+$secondary: #f71b89 ;
 $home-image: url(../img/hero.jpg);
 $show-homeimg: true;
 $b-opacity: .4;
@@ -10,6 +10,10 @@ $b-opacity: .4;
         &#bg-img{
             background: $home-image no-repeat fixed;
             background-size: cover;
+            @include media-small{
+                background-size: cover;
+                background-position-x: 40%;
+            }
 
             &:after{
                 content: '';

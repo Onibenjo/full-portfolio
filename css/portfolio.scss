@@ -55,7 +55,7 @@ header{
 main{
     padding: 4rem;
     //height: 100%;
-    min-height: calc(100vh-3.7rem);
+    min-height: calc(100vh - 60px);
 
     .icons{
         margin-top: 1rem;
@@ -124,8 +124,10 @@ main{
 .job{
     background: lighten($primary-color, 5);
     padding: .5em;
-    border-top: $secondary 2px dashed; 
-    border-bottom: $secondary 2px dashed; 
+    border-top: $secondary 2px solid; 
+    //border-bottom: $secondary 2px solid;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 1);
+    border-radius: 5px;
 }
 h6{
     margin-top: .5rem;
@@ -140,13 +142,149 @@ h6:after{
     background-color: $secondary;
 }
 
+.projects{
+    display: grid;
+    grid-gap: .7em;
+    grid-template-columns: repeat(3, 1fr);
+    //grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-areas: 
+    'three two one'
+    'four five six' 
+    'seven eight nine'
+    'ten eight eleven';
+
+    
+    .item:nth-child(1){
+        grid-area: one;
+    }
+    .item:nth-child(2){
+        grid-area: two;
+    }
+    .item:nth-child(3){
+        grid-area: three;
+    }
+    .item:nth-child(4){
+        grid-area: four;
+    }
+    .item:nth-child(5){
+        grid-area: five;
+    }
+    .item:nth-child(6){
+        grid-area: six;
+    }
+    .item:nth-child(7){
+        grid-area: seven;
+    }
+    .item:nth-child(8){
+        grid-area: eight;
+    }
+    
+    .item:nth-child(9){
+        grid-area: nine;
+    }
+    
+    .item:nth-child(10){
+        grid-area: ten;
+    }
+    
+    .item:nth-child(11){
+        grid-area: eleven;
+    }
+   
+    
+
+    .item{
+        padding: 0;
+        margin: 0;
+        background: $secondary;
+        &:hover{
+            background: darken($secondary, 30);
+            a:nth-child(1){
+                cursor: default;
+            }
+            a, .fab, .fas{
+                background: darken($secondary, 30);
+                color: set-textcolor(darken($secondary, 30));
+            }
+        }
+        
+    }
+    img{
+        max-width: 100%;
+        border: 3px #fff solid;
+        display: block;
+    }
+    .btn{
+        display: block;
+        text-align: center;
+        padding: 1rem 1rem;
+        border: 0;
+        background: $secondary;
+        color: set-textcolor(#fff);
+        i{
+            color: set-textcolor(#fff);
+        }
+        &:hover{
+            background: $secondary;
+            color: set-textcolor($secondary);
+        }
+    }
+    .btn-light{
+        @extend .btn
+        
+    }
+}
+
+// ContactPage
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+
+    div{
+        padding: 1.5rem 2.5rem;
+        border: 3px $secondary solid;
+        @include easeOut;
+        margin-bottom: 2rem;
+        font-size: 1.6rem;
+        border-radius: 8px;
+
+        &:hover{
+            padding: .5rem 1.5rem;
+            background: $secondary;
+            color: set-textcolor($secondary);
+            border: 3px #fff solid;
+            span{
+                color: set-textcolor($secondary);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 footer{
     text-align: center;
     padding: 1.5rem;
     background: darken($primary-color, 7);
     color: set-textcolor($primary-color);
+    height: 60px;
     bottom: 0;
-    height: 3.7rem;
 }
 
 @import 'mobile';
