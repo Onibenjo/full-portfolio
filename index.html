@@ -145,18 +145,18 @@
     <script>
       var typed = new Typed("#typed", {
         stringsElement: "#typed-strings",
-        backSpeed: 90,
-        typeSpeed: 40,
+        backSpeed: 40,
+        typeSpeed: 60,
         loop: true
       });
 
       const b = baffle(".text-secondary");
       b.set({
         characters: "█▓ ▒░/ █░▓/ █▒▒▓/█ ░█▒/ ▒▓░ █<░▒ ▓/░> 🤷‍♂️",
-        speed: 120
+        speed: 100
       })
-        .start()
-        .reveal(4000);
+      .start()
+      .reveal(3000);
     </script>
   </body>
 </html>
