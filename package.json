@@ -2,9 +2,11 @@
   "name": "full-portfolio",
   "version": "1.0.0",
   "description": "Portfolio",
-  "main": "index.html",
+  "main": "index.js",
+  "homepage": "https://onibenjo.github.io/full-portfolio/",
   "scripts": {
-    "sass": "node-sass --w css/ -o css/ --recursive"
+    "sass": "node-sass --w css/ -o css/ --recursive",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Onibenjo",
   "license": "MIT",
