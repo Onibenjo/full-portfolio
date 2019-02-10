@@ -2,7 +2,7 @@
   "name": "full-portfolio",
   "version": "1.0.0",
   "description": "Portfolio",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "sass": "node-sass --w css/ -o css/ --recursive"
   },
